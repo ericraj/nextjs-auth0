@@ -1,7 +1,7 @@
 import { GetSession, GetAccessToken } from './session';
 import { WithApiAuthRequired, WithPageAuthRequired } from './helpers';
 import { HandleAuth, HandleCallback, HandleLogin, HandleLogout, HandleProfile } from './handlers';
-import { ConfigParameters } from './auth0-session';
+import { ConfigParameters, CookieStore, SessionCache } from './auth0-session';
 
 /**
  * The SDK server instance.
@@ -57,6 +57,10 @@ export interface SignInWithAuth0 {
    * Create the main handlers for your api routes
    */
   handleAuth: HandleAuth;
+
+  cookieStore: CookieStore | null;
+
+  sessionCache: SessionCache | null;
 }
 
 /**

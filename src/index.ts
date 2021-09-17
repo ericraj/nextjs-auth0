@@ -92,7 +92,9 @@ export const initAuth0: InitAuth0 = (params) => {
     handleLogout,
     handleCallback,
     handleProfile,
-    handleAuth
+    handleAuth,
+    cookieStore,
+    sessionCache
   };
 };
 

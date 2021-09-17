@@ -41,7 +41,9 @@ const instance: SignInWithAuth0 = {
   },
   withPageAuthRequired() {
     throw new Error(serverSideOnly('withPageAuthRequired'));
-  }
+  },
+  cookieStore: null,
+  sessionCache: null
 };
 
 export const initAuth0: InitAuth0 = () => instance;
